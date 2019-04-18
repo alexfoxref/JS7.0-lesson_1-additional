@@ -2,20 +2,17 @@
 
 let num = 33721,
     numStr = '' + num, //записываем число в строчную переменную
-    resMult = 1, //результат умножения
-    resExp = 1, //результат возведения в степень
-    resExpStr; //строчная запись результата возведения в степень
+    res = 1,
+    resStr; //строчная запись результата возведения в степень
 
 for (let i = 0; i < numStr.length; i++) {
-    resMult *= +numStr[i];
+    res *= +numStr[i];
 }
 
-console.log(resMult);
+console.log(res);
 
-for (let i = 0; i < 3; i++) {
-    resExp *= resMult;
-}
+res **= 3;
 
-resExpStr = '' + resExp;
+resStr = '' + res;
 
-console.log(resExpStr[0] + resExpStr[1]);
+console.log(resStr[0] + resStr[1]);
